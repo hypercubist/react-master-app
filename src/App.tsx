@@ -1,12 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
 
-const globalStyle = createGlobalStyle`
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color : ${(props) => props.theme.bgColor};
+	color:${(props) => props.theme.textColor}
+}
+a {
+	text-decoration:none;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,6 +60,11 @@ table {
 `;
 
 function App() {
-  return <Router></Router>;
+  return (
+    <>
+      <GlobalStyle />
+      <Router></Router>
+    </>
+  );
 }
 export default App;
