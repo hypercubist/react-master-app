@@ -65,6 +65,8 @@ function App() {
       <GlobalStyle />
       <Router></Router>
     </>
+
+
   );
 }
 export default App;

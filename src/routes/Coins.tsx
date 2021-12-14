@@ -18,7 +18,7 @@ const Coin = styled.li`
   background-color: white;
   color:${(props) => props.theme.bgColor};
   padding: 20px;
-  border-radius 15px;
+  border-radius: 15px;
 `;
 
 const Title = styled.h1`
